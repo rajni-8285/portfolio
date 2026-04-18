@@ -1,79 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rajni Singh Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajni Singh | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+
 </head>
 
 <body>
 
-<header>
-  <div class="container">
-    <img src="profile.jpg" class="profile">
-    <h1>Rajni Singh</h1>
-    <p>Backend Developer | UI/UX Enthusiast</p>
-  </div>
-</header>
+<div id="particles-js"></div>
 
-<section>
+<!-- NAVBAR -->
+<nav>
+  <h2>Rajni Singh</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Hi, I'm <span>Rajni Singh</span></h1>
+    <p>BCA Student & Web Developer especial focus on Backend Development ,passionate about building scalable web applications and APIs.</p>
+
+    <button class="btn" onclick="downloadResume()">Download Resume</button>
+    <button class="btn" onclick="scrollToSection('contact')">Contact Me</button>
+
+    <div class="social">
+  <i class="fab fa-linkedin" onclick="openLink('https://www.linkedin.com/in/rajni-singh-12a01334a')"></i>
+  <i class="fab fa-github" onclick="openLink('https://github.com/rajni-8285')"></i>
+  <i class="fab fa-whatsapp" onclick="openLink('https://wa.me/919625406492')"></i>
+  <i class="fas fa-envelope" onclick="openLink('mailto:rajnisingh844729@gmail.com')"></i>
+</div>
+  </div>
+
+  <div class="hero-right">
+    <img src="profile.jpg" alt="profile">
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
   <p>
-    I am a BCA student (2024–2027) passionate about backend development and building scalable web applications.
-    I enjoy working with APIs, databases, and solving real-world problems through technology.
+    I am a BCA student (2024-2027) with strong interest in backend development, 
+    APIs, and building real-world applications.
+    I focus on solving problems and continuously learning new technologies.
   </p>
 </section>
 
+<!-- SKILLS -->
 <section>
   <h2>Skills</h2>
-  <ul>
-    <li>Python (Intermediate), C, C++, Java</li>
-    <li>HTML, CSS, JavaScript</li>
-    <li>SQL, Database Integration</li>
-    <li>FastAPI, Flask</li>
-    <li>GitHub, Firebase, VS Code</li>
-  </ul>
+  <div class="card">Python, C, C++, Java</div>
+  <div class="card">HTML, CSS, JavaScript</div>
+  <div class="card">SQL, Firebase</div>
+  <div class="card">APIs, Backend Development</div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
 
-  <div class="project">
-    <h3>InnerFeelings – Women Wellness Web App</h3>
-    <p>Flask + SQL based app with Gemini API integration for personalized responses.</p>
-    <a href="https://menstrual-health.onrender.com/">Live Demo</a>
+  <div class="card">
+    <h3>InnerFeelings</h3>
+    <p>Women wellness app using Flask + SQL + Gemini API</p>
+    <button class="btn" onclick="openLink('https://menstrual-health.onrender.com/')">Live</button>
   </div>
 
-  <div class="project">
-    <h3>SecureWay – Smart Safety App</h3>
-    <p>Real-time tracking & safety features with maps integration.</p>
-    <a href="https://safesafar-e6efc.web.app">Live Demo</a>
+  <div class="card">
+    <h3>SecureWay</h3>
+    <p>Safety app with maps & emergency support and zone detection technique</p>
+    <button class="btn" onclick="openLink('https://safesafar-e6efc.web.app')">Live</button>
   </div>
 
-  <div class="project">
-    <h3>SmartWealth – Finance App</h3>
-    <p>Finance management app using Flask & SQL.</p>
-    <a href="https://smartwealth1.onrender.com/">Live Demo</a>
+  <div class="card">
+    <h3>SmartWealth</h3>
+    <p>Bank customer support system app ,to help customers with their financial needs</p>
+    <button class="btn" onclick="openLink('https://smartwealth1.onrender.com/')">Live</button>
+  </div>
+   <div class="card">
+    <h3>Edushield</h3>
+    <p>To help student ,study according to their mood+ wellness app using Flask + face detection technique + Gemini API</p>
+    <button class="btn" onclick="openLink('https://menstrual-health.onrender.com/')">Live</button>
   </div>
 
 </section>
 
-<section>
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
   <h2>Achievements</h2>
-  <ul>
-    <li>Qualified TCS NQT Cognitive (74.43%)</li>
-    <li>9.82 CGPA in BCA</li>
-    <li>Best Welfare Idea – InnerFeelings</li>
-    <li>Future Tech Leader – SecureWay</li>
-  </ul>
+  <div class="card">TCS NQT Qualified (74.43%)</div>
+  <div class="card">9.82 SGPA (BCA third semester)</div>
+  <div class="card">9.67 SGPA (BCA second semester)</div>
+  <div class="card">Best Welfare Idea - InnerFeelings</div>
+  <div class="card">Best innovative idea for edushield</div>
+  <div class="card">Future Tech Leader - SecureWay</div>
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
-  <p>Email: rajnisingh844729@gmail.com</p>
-  <p>GitHub: github.com/rajni-8285</p>
-  <p>LinkedIn: linkedin.com/in/rajni-singh-12a01334a</p>
+  <p>📍 Noida, Uttar Pradesh, India</p>
+  <p>📞 9625406492</p>
+  <p>📧 rajnisingh844729@gmail.com</p>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Rajni Singh | All Rights Reserved</p>
+</footer>
+
+<!-- JS -->
+<script>
+
+// Scroll
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+// Open links
+function openLink(url) {
+  window.open(url, "_blank");
+}
+
+// Download resume
+function downloadResume() {
+  const link = document.createElement("a");
+  link.href = "RAJNI_SINGH_RESUME.pdf"; // Put your resume file in same folder
+  link.download = "Rajni_Singh_Resume.pdf";
+  link.click();
+}
+
+// Particles
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: { enable: true },
+  }
+});
+
+</script>
 
 </body>
 </html>
